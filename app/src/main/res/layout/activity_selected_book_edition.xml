@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SelectedBookEditionActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <com.zhuravlenko2555dev.library.ui.MarqueeToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Book name:" />
+
+                        <TextView
+                            android:id="@+id/textViewBookName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="-----"
+                            android:textSize="24sp"
+                            android:textStyle="bold|italic"
+                            tools:text="Simple book name" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Book author(s):" />
+
+                        <TextView
+                            android:id="@+id/textViewBookAuthor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="-----"
+                            android:textSize="18sp"
+                            tools:text="Simple author name(s)" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Book genre(s):" />
+
+                        <TextView
+                            android:id="@+id/textViewBookGenre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="-----"
+                            android:textSize="18sp"
+                            tools:text="Simple genre name(s)" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Book OLID:" />
+
+                        <TextView
+                            android:id="@+id/textViewBookOLID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:text="-----"
+                            android:textSize="18sp"
+                            tools:text="Simple OLID" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageViewBookMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/placeholder_book" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book language:" />
+
+                <TextView
+                    android:id="@+id/textViewBookEditionLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="-----"
+                    android:textSize="18sp"
+                    tools:text="Simple language" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book publish date:" />
+
+                <TextView
+                    android:id="@+id/textViewBookEditionPublishDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="-----"
+                    android:textSize="18sp"
+                    tools:text="Simple publish date" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book publisher:" />
+
+                <TextView
+                    android:id="@+id/textViewBookEditionPublisher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="-----"
+                    android:textSize="18sp"
+                    tools:text="Simple publisher" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book number of pages:" />
+
+                <TextView
+                    android:id="@+id/textViewBookEditionNumberOfPages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="-----"
+                    android:textSize="18sp"
+                    tools:text="Simple number of pages" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book description:" />
+
+                <TextView
+                    android:id="@+id/textViewBookEditionDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="-----"
+                    android:textSize="18sp"
+                    tools:text="Simple description" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book count:" />
+
+                <TextView
+                    android:id="@+id/textViewBookEditionCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="-----"
+                    android:textSize="18sp"
+                    tools:text="Simple count" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book date of addition:" />
+
+                <TextView
+                    android:id="@+id/textViewBookEditionDateOfAddition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="-----"
+                    android:textSize="18sp"
+                    tools:text="Simple date of addition" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/white"/>
+
+                <ImageView
+                    android:id="@+id/imageViewBookEditionFavorite"
+                    android:layout_width="48dp"
+                    android:layout_height="49dp"
+                    android:alpha="0.5"
+                    android:src="@drawable/favorite" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right"
+                            android:numStars="5" />
+
+                        <RatingBar
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right"
+                            android:numStars="4" />
+
+                        <RatingBar
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right"
+                            android:numStars="3" />
+
+                        <RatingBar
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right"
+                            android:numStars="2" />
+
+                        <RatingBar
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="right"
+                            android:numStars="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewCountFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:ems="3"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            tools:text="000" />
+
+                        <TextView
+                            android:id="@+id/textViewCountFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:ems="3"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            tools:text="000" />
+
+                        <TextView
+                            android:id="@+id/textViewCountThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:ems="3"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            tools:text="000" />
+
+                        <TextView
+                            android:id="@+id/textViewCountTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:ems="3"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            tools:text="000" />
+
+                        <TextView
+                            android:id="@+id/textViewCountOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:ems="3"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            tools:text="000" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textViewAVGValue"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="3"
+                        android:gravity="center"
+                        tools:text="000"
+                        android:textSize="30sp"
+                        android:textStyle="bold|italic" />
+                </LinearLayout>
+
+                <RatingBar
+                    android:id="@+id/ratingBarMyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="1" />
+
+                <Button
+                    android:id="@+id/buttonTakeOrReturn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_background"
+                    android:text="Take a book" />
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.design.widget.CoordinatorLayout>

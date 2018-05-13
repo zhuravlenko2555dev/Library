@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:defaultValue="@string/serverAddressDefaultValue"
+        android:dialogIcon="@drawable/ip_address"
+        android:dialogTitle="@string/serverAddressTitle"
+        android:icon="@drawable/ip_address"
+        android:key="@string/serverAddress"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/serverAddressTitle" />
+
+    <Preference
+        android:icon="@drawable/log_out"
+        android:key="@string/logout"
+        android:title="@string/logoutTitle" />
+
+    <ListPreference
+        android:defaultValue="no"
+        android:entries="@array/pref_titles"
+        android:entryValues="@array/pref_values"
+        android:dialogIcon="@drawable/timer"
+        android:dialogTitle="@string/timerTitle"
+        android:icon="@drawable/timer"
+        android:key="@string/timer"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="@string/timerTitle"/>
+</PreferenceScreen>

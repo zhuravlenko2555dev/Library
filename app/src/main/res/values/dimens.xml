@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_view_book_small_width">60dp</dimen>
+    <dimen name="image_view_book_small_height">60dp</dimen>
+    <dimen name="image_view_book_medium_width">150dp</dimen>
+    <dimen name="image_view_book_medium_height">250dp</dimen>
+</resources>

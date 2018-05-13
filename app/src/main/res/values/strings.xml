@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Library</string>
+    <string name="search_book">Search book</string>
+    <string name="search_full_address">Search full address</string>
+    <string name="sort_book">Sort book</string>
+    <string name="ok">ok</string>
+    <string name="settings">settings</string>
+    <string name="serverAddress">serverAddress</string>
+    <string name="serverAddressTitle">Server Address</string>
+    <string name="serverAddressDefaultValue">http://192.168.0.101/</string>
+    <string name="logout">logout</string>
+    <string name="logoutTitle">Log Out</string>
+    <string name="timer">timer</string>
+    <string name="timerTitle">Timer Delay</string>
+    <string name="timerDefaultValue">no/</string>
+    <string-array name="pref_titles">
+        <item>no</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="pref_values">
+        <item>no</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+</resources>
