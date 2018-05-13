@@ -1,3 +1,5 @@
-https://vk.com/video166744692_456239308
-[a relative link](library.rar)
-[a relative link](dump_without_data.sql)
+https://vk.com/video166744692_456239308<br />
+[php scripts](library.rar)<br />
+[dump database without data](dump_without_data.sql)
+[database schema](kursach5.png)
+[database schema](kursach5_draw.jpg)
